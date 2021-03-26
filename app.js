@@ -1,5 +1,6 @@
 let goalCount=0
 let damage=1
+
 let clickUpgrades = {
   normal: {
     price: 20,
@@ -14,30 +15,24 @@ let clickUpgrades = {
   better: {
     price: 250,
     quantity: 0,
-    multiplier: 20
+    multiplier: 3,
+    time: 5000,
+    click:1
   },
   best: {
     price: 500,
     quantity: 0,
-    multiplier: 40
+    multiplier: 4,
+    time:2000,
+    click:1
   }
-};
-
-
+}
 
 function mine(){
 goalCount+=damage
 console.log(goalCount)
 update()
 }
-
-// upgradePicked=upgradeChoice(clickUpgrades)
-// function upgradeChoice(banana){
-//  let upgradePicked.upgradePicked2= clickUpgrades[banana]
-
-// }
-
-
 
 function upgradeChoice(banana){
   let upgradePicked= clickUpgrades[banana]
@@ -56,15 +51,28 @@ function upgradeChoice(banana){
 
     damage= damage+ upgradePicked.multiplier
 
-
     }else{
       console.log('needmoremoney')
     }
-
     update()
 }
+// the function that has the time in needs to be made before the 
+// function autoClicker() {
+//   setInterval(
+//     if 
+//     goalCount+=1 2000)
+// }
 
 
+
+let myVar;
+function autoClicker() {
+  myVar = setInterval(every2sec, 2000);
+}
+
+function clickeverytwo() { 
+  goalCount++
+}
 
 
 
