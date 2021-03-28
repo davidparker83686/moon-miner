@@ -14,9 +14,24 @@
     cursor: pointer;
   }
 
+  @media screen and (max-width:760px){
+    .moon{
+      max-width: 19rem;
+      cursor: pointer;
+    }
+    }
+
+
 .moon-text{
   color: rgb(128, 51, 138);
 }
+
+@media screen and (max-width:760px){
+  .iphonetitle{
+    color:blanchedalmond
+  }
+  }
+
 
 /* .heading{
   background-color: rgb(201, 123, 211);
@@ -26,6 +41,13 @@
   font-size: 60px;
   color:rgb(128, 51, 138)
 }
+
+@media screen and (max-width:760px){
+  .tally{
+    font-size: 30px;
+    color:rgb(128, 51, 138)
+  }
+  }
 
 .clickbg{
 background-color: rgb(167, 255, 243);
@@ -45,6 +67,10 @@ background-color: rgb(167, 255, 243);
 
 .font-chango{
   font-family: 'Chango', cursive;
+}
+
+.footertext{
+  color: rgb(170, 124, 212)
 }
 
 
