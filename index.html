@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+
   </head>
 
-  <body>
+  <body class="moonbackground font-chango">
       <!-- GAME HEADER -->
-    <header class="container-fluid heading p-3 ">
+    <header class="container-fluid ">
       <div class="row text-center no-select">
-         <div class="col-12 text-white">
-           <span><h1>MOON MINING</h1><p>Our quest for the most amazing, most delicious, most unique grilled cheese has led us to to Moon. She legend says shes made of solid cheese. Help us mine the Moon Cheese for our grilled cheese sandwich! </p>
+         <div class="col-12 text-white mt-3 mb-5">
+           <span><h1>M O O N  M I N I N G</h1>
            </span>
 
 
@@ -26,53 +29,51 @@
 
 
 
-    <main class="container-fluid no-select  moonbackground">
-      <div class="row">
+    <main class="container-fluid no-select  ">
+      <div class="row justify-content-between ">
+        <!-- MY POINT TALLY, -->
+        <div class="col-md-2 ml-5 ml-md-3 ">
+          <span class="moon-text"><h4>MOON MINING</h4><p>Our quest for the most amazing, most delicious, most unique grilled cheese has led us to to Moon. Legend has it that made of solid cheese. Help us mine the Moon Cheese for our celestial grilled cheese sandwich! </p>
+            <p>WE NEED 1000 PIECES OF CHEESE FOR OUR SANDWICH!</p>
+          </span>
+          <button type="button" class="btn btn-warning text-white my-5">Make Grilled Cheeese!</button>
+          <spanc class="tally text-center"><b>CHEESE:<span id="tally">0</span></span></b>
+
+        </div>
 
         <!-- MY CLICKABLE IMAGE -->
-        <div class=" col">
-          <img src="MOON 2.png" alt="moon"  class="moon p-5 rotate" onclick="mine()">
+        <div class=" col-md-4">
+          <img src="MOON 2crop.png" alt="moon"  class="moon py-5 rotate" onclick="mine()">
         </div>
 
 
-      <!-- MY POINT TALLY, upgrades, buttons  -->
-          <div class="col text-center m-5 tally">
-            <span><b>TALLY:<span id="tally">0</span></span></b>
-          </div>
-
-          <div class="card text-center col m-5">
-            <div class="card-body">
-
-              <h4 class="">onclick</h4>
-
-              <p class="card-text">
+      <!-- upgrades buttons  -->
+          <div class="col-md-3 card text-center mr-0 mr-md-5 ml-5 ml-md-0 mt-2 mt-md-0 card-edge body">
+            <div class="card-body mt-5">
+              <p class="text-warning"><b> Trade in CHEESE to gain help!</b></p>
+              <p class="card-text mt-3">
+                <p>Spoon will grab one extra cheese per swing.</p>
                 <span ><b><span id="normalupgrades">0</span>x</span></b>
-                <button class="bg-primary btn" onclick="upgradeChoice('normal')"><b>Normal</b><b id="normalBtn">$20</b></button>
+                <button class="clickbg btn text-info" onclick="upgradeChoice('normal')"><b>SPOON</b><b id="normalBtn">~20</b></button>
               </p>
-              <span>adds one damage to your hit</span>
 
                 <p class="card-text">
+                <p>Knife will grab two extra cheese per swing.</p>
                 <span ><b><span id="strongerupgrades">0</span>x</span></b>
-                <button class="bg-primary btn" onclick="upgradeChoice('stronger')"> <b>Stronger</b><b id="strongerBtn">$50</b></button>
+                <button class="clickbg btn text-info" onclick="upgradeChoice('stronger')"> <b>KNIFE</b><b id="strongerBtn">~50</b></button>
                 </p>
-                <span>adds two damage to your hit</span>
 
-                <h4 class="">auto</h4>
-
-                <p class="card-text">
+                <p class="card-text mt-3">
+                  <p>Hire a star to swing along side you.</p>
                   <span ><b><span id="betterupgrades">0</span>x</span></b>
-                  <button class="bg-warning btn" onclick="upgradeAutoChoice('better')"><b>Better</b><b id="betterBtn">$250</b></button>
+                  <button class="autobg btn text-danger" onclick="upgradeAutoChoice('better')"><b>STAR</b><b id="betterBtn">~250</b></button>
                 </p>
-                <span>hire a friend who will help you hit</span>
-  
 
                   <p class="card-text">
+                  <p>The goddes Artemis will gift you moon cheese.</p>
                   <span ><b><span id="bestupgrades">0</span>x</span></b>
-                  <button class="bg-warning btn" onclick="upgradeAutoChoiceTwo('best')"><b>Best</b><b id="bestBtn">$500</b></button>
+                  <button class="autobg btn text-danger" onclick="upgradeAutoChoiceTwo('best')"><b>ARTEMIS</b><b id="bestBtn">~500</b></button>
                   </p>
-                  <span>hire a super friend who will help you hit alot</span>
-
-
             </div>
             </div>
 
@@ -80,7 +81,7 @@
     </main>
 
         <!-- FOOTER -->
-    <footer class="container-fluid no-select bg-secondary">
+    <footer class="container-fluid no-select bg-secondary mt-5">
       <div class="row text-center">
        <div class="col-6">
          <b>3/26/2021</b> 
@@ -90,12 +91,13 @@
       </div>
     </div>
 
-
-    <button onclick="fiesta()">
+    <audio src="cl.mp3" id="music" ></audio>
+    <!-- <button onclick="fiesta()">
       <h1>play
       <audio src="cl.mp3" id="music" ></audio>
     </h1>
-    </button>
+    </button> -->
+
   </footer>
 
     <script src="app.js"></script>

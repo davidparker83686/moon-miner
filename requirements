@@ -6,8 +6,5 @@
 ###Purchasing an upgrade decreases the resource immediately
 ###Upgrades have different modifier values
 ###When a user buys an upgrade, the price of the upgrade goes up
-
-
-
-Users can see how many of each upgrade they have and the amount of modification that upgrade provides
-Automatic upgrades are applied at least every 3 seconds, and the screen is updated to reflect this change automatically
+#####Users can see how many of each upgrade they have and the amount of modification that upgrade provides
+####Automatic upgrades are applied at least every 3 seconds, and the screen is updated to reflect this change automatically

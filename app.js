@@ -32,6 +32,7 @@ let clickUpgrades = {
 function mine(){
 goalCount+=damage
 console.log(goalCount)
+document.getElementById('music').play()
 update()
 }
 
@@ -108,9 +109,9 @@ function upgradeAutoChoiceTwo(pear){
 
 
 
-function fiesta() {
-  document.getElementById('music').play()
-}
+// function fiesta() {
+//   document.getElementById('music').play()
+// }
 
 
 
@@ -118,14 +119,14 @@ function fiesta() {
 function update(){
   document.getElementById('tally').innerText = `${goalCount}`
   document.getElementById('normalupgrades').innerText = `${clickUpgrades.normal.quantity}`
-  document.getElementById('normalBtn').innerText = `$${clickUpgrades.normal.price}`
+  document.getElementById('normalBtn').innerText = `~${clickUpgrades.normal.price}`
 
   document.getElementById('strongerupgrades').innerText = `${clickUpgrades.stronger.quantity}`
-  document.getElementById('strongerBtn').innerText = `$${clickUpgrades.stronger.price}`
+  document.getElementById('strongerBtn').innerText = `~${clickUpgrades.stronger.price}`
 
   document.getElementById('betterupgrades').innerText = `${clickUpgrades.better.quantity}`
-  document.getElementById('betterBtn').innerText = `$${clickUpgrades.better.price}`
+  document.getElementById('betterBtn').innerText = `~${clickUpgrades.better.price}`
 
   document.getElementById('bestupgrades').innerText = `${clickUpgrades.best.quantity}`
-  document.getElementById('bestBtn').innerText = `$${clickUpgrades.best.price}`
+  document.getElementById('bestBtn').innerText = `~${clickUpgrades.best.price}`
 }

@@ -3,36 +3,60 @@
 }
 
 .moonbackground{
-  background-image: url(./MOONBACKGROUND.png);
+  background-image: url(./MOONBACKGROUNDcrop.png);
   min-height: 80vh;
-  background-size: auto;
+  background-size: cover;
   background-position: center;
 }
 
 .moon{
-  max-width: 40rem;
+  max-width: 35rem;
+    cursor: pointer;
+  }
+
+.moon-text{
+  color: rgb(128, 51, 138);
 }
 
-.heading{
+/* .heading{
   background-color: rgb(201, 123, 211);
-}
+} */
 
 .tally{
-  font-size: 80px;
-  color:rgb(128, 51, 138);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+  font-size: 60px;
+  color:rgb(128, 51, 138)
 }
 
-.rotate {
-  animation: rotation 9s infinite linear;
+.clickbg{
+background-color: rgb(167, 255, 243);
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
+.autobg{
+  background-color: rgb(250, 169, 140);
+}
+
+
+.card-edge{
+  border-radius: 100px;
+}
+.body{
+  background-color: rgb(133, 74, 141);
+}
+
+.font-chango{
+  font-family: 'Chango', cursive;
+}
+
+
+
+  .rotate {
+    animation: rotation 9s infinite linear;
   }
-  to {
-    transform: rotate(359deg);
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
   }
-}
