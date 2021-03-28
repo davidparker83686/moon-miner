@@ -1,4 +1,5 @@
 let goalCount=0
+
 let damage=1
 
 let clickUpgrades = {
@@ -16,15 +17,15 @@ let clickUpgrades = {
     price: 250,
     quantity: 0,
     multiplier: 3,
-    time: 5000,
+    time: 2000,
     click:1
   },
   best: {
     price: 500,
     quantity: 0,
     multiplier: 4,
-    time:2000,
-    click:1
+    time:1000,
+    click:10
   }
 }
 
@@ -32,6 +33,18 @@ function mine(){
 goalCount+=damage
 console.log(goalCount)
 update()
+}
+
+function hit(){
+  goalCount++
+  console.log(goalCount)
+  update()
+}
+
+function hitTwo(){
+  goalCount += 10
+  console.log(goalCount)
+  update()
 }
 
 function upgradeChoice(banana){
@@ -56,22 +69,47 @@ function upgradeChoice(banana){
     }
     update()
 }
-// the function that has the time in needs to be made before the 
-// function autoClicker() {
-//   setInterval(
-//     if 
-//     goalCount+=1 2000)
-// }
 
+function upgradeAutoChoice(apple){
+    let autoUpgradePicked= clickUpgrades[apple]
+    // console.log( 'upgradePicked', upgradePicked)
 
-
-let myVar;
-function autoClicker() {
-  myVar = setInterval(every2sec, 2000);
+    if(goalCount>= autoUpgradePicked.price){
+      console.log('purchased')
+      goalCount= goalCount-autoUpgradePicked.price
+      // console.log( 'piggy')
+      autoUpgradePicked.quantity++
+      // console.log(upgradePicked.quantity)
+      autoUpgradePicked.price=autoUpgradePicked.price * 2
+      setInterval(hit,2000)
+     }else{
+      console.log('need more money')
+  }
+  update()
 }
 
-function clickeverytwo() { 
-  goalCount++
+function upgradeAutoChoiceTwo(pear){
+    let autoUpgradePicked= clickUpgrades[pear]
+    // console.log( 'upgradePicked', upgradePicked)
+    if(goalCount>= autoUpgradePicked.price){
+      console.log('purchased')
+      goalCount= goalCount-autoUpgradePicked.price
+      // console.log( 'piggy')
+      autoUpgradePicked.quantity++
+      // console.log(upgradePicked.quantity)
+      autoUpgradePicked.price=autoUpgradePicked.price * 2
+      setInterval(hitTwo,1000)
+     }else{
+      console.log('need more money')
+  }
+  update()
+}
+
+
+
+
+function fiesta() {
+  document.getElementById('music').play()
 }
 
 
@@ -90,5 +128,4 @@ function update(){
 
   document.getElementById('bestupgrades').innerText = `${clickUpgrades.best.quantity}`
   document.getElementById('bestBtn').innerText = `$${clickUpgrades.best.price}`
-
 }
