@@ -12,88 +12,90 @@
 
   <body>
       <!-- GAME HEADER -->
-    <header class="container-fluid bg-warning p-5 text-center no-select"><div class="row"> <div class="col"><h1>MINE</h1> </div></div> 
-    
-      <button onclick="fiesta()">
-        <h1>play
-        <audio src="cl.mp3" id="music" ></audio>
-      </h1>
-      </button>
-    
-    
+    <header class="container-fluid heading p-3 ">
+      <div class="row text-center no-select">
+         <div class="col-12 text-white">
+           <span><h1>MOON MINING</h1><p>Our quest for the most amazing, most delicious, most unique grilled cheese has led us to to Moon. She legend says shes made of solid cheese. Help us mine the Moon Cheese for our grilled cheese sandwich! </p>
+           </span>
+
+
+          </div>
+        </div>
     </header>
 
 
 
 
-    <main class="container-fluid bg-danger no-select">
+    <main class="container-fluid no-select  moonbackground">
       <div class="row">
 
         <!-- MY CLICKABLE IMAGE -->
-        <div class=" col-2 col-md-2 ">
-          <img src="circle.png" alt="moon" onclick="mine()">
+        <div class=" col">
+          <img src="MOON 2.png" alt="moon"  class="moon p-5 rotate" onclick="mine()">
         </div>
-      </div>
+
 
       <!-- MY POINT TALLY, upgrades, buttons  -->
-        <div class="row">
-
-          <div class="col-11 col-md-2">
-            <span><b>TALLY:</b><span id="tally" ><b>0</b></span></span>
+          <div class="col text-center m-5 tally">
+            <span><b>TALLY:<span id="tally">0</span></span></b>
           </div>
 
+          <div class="card text-center col m-5">
+            <div class="card-body">
 
-<div class="card text-center">
-  <div class="card-body">
-    <h4 class="card-title">onclick</h4>
+              <h4 class="">onclick</h4>
 
-    <p class="card-text">
-      <span ><b><span id="normalupgrades">0</span>x</span></b>
-      <button class="bg-primary btn" onclick="upgradeChoice('normal')"><b>Normal</b><b id="normalBtn">$20</b></button>
-    </p>
-    <span>adds one damage to your hit</span>
+              <p class="card-text">
+                <span ><b><span id="normalupgrades">0</span>x</span></b>
+                <button class="bg-primary btn" onclick="upgradeChoice('normal')"><b>Normal</b><b id="normalBtn">$20</b></button>
+              </p>
+              <span>adds one damage to your hit</span>
 
-      <p class="card-text">
-      <span ><b><span id="strongerupgrades">0</span>x</span></b>
-      <button class="bg-primary btn" onclick="upgradeChoice('stronger')"> <b>Stronger</b><b id="strongerBtn">$50</b></button>
-      </p>
-      <span>adds two damage to your hit</span>
-  </div>
-</div>
+                <p class="card-text">
+                <span ><b><span id="strongerupgrades">0</span>x</span></b>
+                <button class="bg-primary btn" onclick="upgradeChoice('stronger')"> <b>Stronger</b><b id="strongerBtn">$50</b></button>
+                </p>
+                <span>adds two damage to your hit</span>
+
+                <h4 class="">auto</h4>
+
+                <p class="card-text">
+                  <span ><b><span id="betterupgrades">0</span>x</span></b>
+                  <button class="bg-warning btn" onclick="upgradeAutoChoice('better')"><b>Better</b><b id="betterBtn">$250</b></button>
+                </p>
+                <span>hire a friend who will help you hit</span>
+  
+
+                  <p class="card-text">
+                  <span ><b><span id="bestupgrades">0</span>x</span></b>
+                  <button class="bg-warning btn" onclick="upgradeAutoChoiceTwo('best')"><b>Best</b><b id="bestBtn">$500</b></button>
+                  </p>
+                  <span>hire a super friend who will help you hit alot</span>
 
 
-<div class="card text-center">
-  <div class="card-body">
-    <h4 class="card-title">auto</h4>
+            </div>
+            </div>
 
-     <p class="card-text">
-      <span ><b><span id="betterupgrades">0</span>x</span></b>
-      <button class="bg-warning btn" onclick="upgradeAutoChoice('better')"><b>Better</b><b id="betterBtn">$250</b></button>
-     </p>
-     <span>hire a friend who will help you hit</span>
-
-      <p class="card-text">
-      <span ><b><span id="bestupgrades">0</span>x</span></b>
-      <button class="bg-warning btn" onclick="upgradeAutoChoiceTwo('best')"><b>Best</b><b id="bestBtn">$500</b></button>
-      </p>
-      <span>hire a super friend who will help you hit alot</span>
-
-  </div>
-</div>
-
-         </div>
-
+        </div>
     </main>
+
         <!-- FOOTER -->
-    <footer class="container-fluid no-select">
+    <footer class="container-fluid no-select bg-secondary">
       <div class="row text-center">
        <div class="col-6">
-         <p>3/26/2021</p> 
+         <b>3/26/2021</b> 
       </div>
        <div class="col-6">
-         <p>David Parker</p> 
+         <b>DAVID PARKER</b> 
       </div>
     </div>
+
+
+    <button onclick="fiesta()">
+      <h1>play
+      <audio src="cl.mp3" id="music" ></audio>
+    </h1>
+    </button>
   </footer>
 
     <script src="app.js"></script>

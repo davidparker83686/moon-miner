@@ -1,3 +1,38 @@
 .no-select {
   user-select: none;
 }
+
+.moonbackground{
+  background-image: url(./MOONBACKGROUND.png);
+  min-height: 80vh;
+  background-size: auto;
+  background-position: center;
+}
+
+.moon{
+  max-width: 40rem;
+}
+
+.heading{
+  background-color: rgb(201, 123, 211);
+}
+
+.tally{
+  font-size: 80px;
+  color:rgb(128, 51, 138);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.rotate {
+  animation: rotation 9s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
