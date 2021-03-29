@@ -113,11 +113,25 @@ function upgradeAutoChoiceTwo(pear){
 //   document.getElementById('music').play()
 // }
 
+function makeGrilledCheese(){
+  if(goalCount>= 1000){
+    console.log('grillcheese made!')
+    goalCount= 0
+    // console.log( 'piggy')
+    document.getElementById('moon').src = "circle.png"
+    document.getElementById('yummy').innerText = 'YUMMY!'
 
+   }else{
+    console.log('need more money')
+}
+
+update()
+}
 
 
 function update(){
   document.getElementById('tally').innerText = `${goalCount}`
+
   document.getElementById('normalupgrades').innerText = `${clickUpgrades.normal.quantity}`
   document.getElementById('normalBtn').innerText = `~${clickUpgrades.normal.price}`
 

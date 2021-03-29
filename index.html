@@ -35,14 +35,13 @@
           <span class="moon-text"><h4 class="iphonetitle">MOON MINING</h4><p>Our quest for the most amazing, most delicious, most unique grilled cheese has led us to the Moon. Legend has it that made of solid cheese. Help us mine the Moon Cheese for our celestial grilled cheese sandwich! </p>
             <p>WE NEED 1000 PIECES OF CHEESE FOR OUR SANDWICH!</p>
           </span>
-          <button type="button" class="btn btn-warning text-white my-0 my-md-5">Make Grilled Cheeese!</button>
-          <spanc class="tally text-center"><b>CHEESE:<span id="tally">0</span></span></b>
-
+          <button type="button" class="btn btn-warning text-white my-0 my-md-5" onclick="makeGrilledCheese()">Make Grilled Cheeese!</button>
+          <spanc class="tally text-center" id="yummy"><b>CHEESE:<span id="tally">0</span></span></b>
         </div>
 
         <!-- MY CLICKABLE IMAGE -->
         <div class=" col-md-4 ml-3 ml-md-0">
-          <img src="MOON 2crop.png" alt="moon"  class="moon py-5 rotate" onclick="mine()">
+          <img src="MOON 2crop.png" alt="moon"  class="moon py-5 rotate" onclick="mine()"id="moon">
         </div>
 
 
@@ -96,6 +95,8 @@
       <audio src="cl.mp3" id="music" ></audio>
     </h1>
     </button> -->
+
+
 
   </footer>
 
