@@ -118,7 +118,7 @@ function makeGrilledCheese(){
     console.log('grillcheese made!')
     goalCount= 0
     // console.log( 'piggy')
-    document.getElementById('moon').src = "circle.png"
+    document.getElementById('moon').src = "MOONSANDWITCH.png"
     document.getElementById('yummy').innerText = 'YUMMY!'
 
    }else{
